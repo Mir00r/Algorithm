@@ -66,8 +66,8 @@ void merge_sort_with_Partition (int beg, int end){
     if (beg < end){
         mid = (beg + end) / 2;
 
-        merge_sort (beg, mid);
-        merge_sort (mid+1, end);
+        merge_sort_with_Partition (beg, mid);
+        merge_sort_with_Partition (mid+1, end);
         merge (beg, mid, end);
     }
 }
